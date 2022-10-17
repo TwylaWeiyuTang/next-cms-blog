@@ -9,7 +9,7 @@ const PostWidget = ({categories, slug}) => {
   useEffect(() => {
     // if there is a slug, means if we are viewing a specific article at the moment
     if(slug) {
-      getSimilarPosts(category, slug)
+      getSimilarPosts(categories, slug)
         .then((result) => setRelatedPosts(result))
     } else {
       getRecentPosts()
